@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>သီချင်းများ</title>
+    <meta charset="UTF-8">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body>
+
+    <nav class="bg-white w-full p-5 md:flex md:justify-between md:items-center shadow fixed z-10">
+            <div class="flex justify-between items-center">
+                  <span class="text-2xl cursor-pointer font-bold">
+                        <img src="./img/logo.jpg" class="w-12 h-12 inline rounded-full mr-4" alt="logo" />မန္တလေးမြို့တော်
+                  </span>
+                  <span class="text-2xl cursor-pointer md:hidden mx-4">
+                        <i class="fas fa-bars togglemenu" onclick="togglemenu(this)"></i>
+                  </span>
+            </div>
+
+            <ul class="w-full opacity-0 bg-white absolute left-0 pl-5 py-5 md:w-auto md:flex md:items-center md:static md:pl-0 md:py-0  md:opacity-100 transition-all duration-500">
+                  <li class="mx-5 my-6 md:my-0"><a href="mainpage.html" class="text-lg px-5 py-2 transition-all duration-500 hover:text-white hover:bg-sky-600 hover:rounded-lg">Home</a></li>
+                  <li class="mx-5 my-6 md:my-0"><a href="places.html" class="text-lg px-5 py-2 transition-all duration-500 hover:text-white hover:bg-sky-600 hover:rounded-lg">Places</a></li>
+                  <li class="mx-5 my-6 md:my-0"><a href="post.html" class="text-lg px-5 py-2 transition-all duration-500 hover:text-white hover:bg-sky-600 hover:rounded-lg">Posts</a></li>
+                  <li class="mx-5 my-6 md:my-0"><a href="gallery.html" class="text-lg px-5 py-2 transition-all duration-500 hover:text-white hover:bg-sky-600 hover:rounded-lg">Gallery</a></li>
+                  <li class="mx-5 my-6 md:my-0"><a href="video.html" class="text-lg px-5 py-2 transition-all duration-500 hover:text-white hover:bg-sky-600 hover:rounded-lg">Music</a></li>
+                  <li class="mx-5 my-6 md:my-0"><a href="contactus.html" class="text-lg px-5 py-2 transition-all duration-500 hover:text-white hover:bg-sky-600 hover:rounded-lg">Contact</a></li>
+            </ul>
+        </nav>
+
+    <div class="bg-gray-100 flex items-center justify-center min-h-screen h-[800px]">
+
+        <div class="container bg-white shadow-lg rounded-xl p-6 w-full max-w-xl">
+
+            <h1 class="text-2xl font-bold text-center mb-4">Music</h1>
+
+            <!-- Video -->
+            <video 
+                src="" 
+                id="videoscreen" 
+                class="videoscreen w-full rounded-lg bg-black mb-4">
+            </video>
+
+            <!-- Controls -->
+            <div class="controls flex items-center gap-3">
+
+                <button type="button" id="prev" class="ctrl-btn p-2 rounded-full bg-gray-200 hover:bg-gray-300">
+                    <i class="fas fa-backward"></i>
+                </button>
+
+                <button type="button" id="play" class="ctrl-btn p-3 rounded-full bg-blue-600 text-white hover:bg-blue-700">
+                    <i class="fas fa-play"></i>
+                </button>
+
+                <button type="button" id="next" class="ctrl-btn p-2 rounded-full bg-gray-200 hover:bg-gray-300">
+                    <i class="fas fa-forward"></i>
+                </button>
+
+                <button type="button" id="stop" class="ctrl-btn p-2 rounded-full bg-red-500 text-white hover:bg-red-600">
+                    <i class="fas fa-stop"></i>
+                </button>
+
+                <!-- Progress -->
+                <div id="progress" class="progress flex-1 h-2 bg-gray-300 rounded cursor-pointer">
+                    <div id="progress-bar" class="progress-bar h-full w-0 bg-blue-600 rounded"></div>
+                </div>
+
+                <!-- Fullscreen -->
+                <span id="openfullscreen" class="openfullscreen cursor-pointer text-gray-600 hover:text-black">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                </span>
+
+                <span id="closefullscreen" class="closefullscreen cursor-pointer text-gray-600 hover:text-black hidden">
+                    <i class="fas fa-expand"></i>
+                </span>
+
+                <!-- Time -->
+                <span id="displaytime" class="displaytime text-sm text-gray-600 w-12 text-right">
+                    00:00
+                </span>
+
+            </div>
+
+            <!-- Title Panel -->
+            <div class="pannel mt-4 text-center">
+                <h4 id="title" class="title font-semibold text-gray-700">
+                    Mandalay Music Collections
+                </h4>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        //UI
+
+const getcontainer = document.querySelector(".container");
+const getvideoscreen = document.getElementById('videoscreen');
+const playbtn = document.getElementById('play'),
+      prevbtn = document.getElementById('prev'),
+      nextbtn = document.getElementById('next'),
+      stopbtn = document.getElementById('stop');
+const getprogress = document.getElementById('progress'),
+    getprogressbar = document.getElementById('progress-bar');
+const getdisplaytime = document.getElementById('displaytime');
+const gettitle = document.getElementById('title');
+const getopenfullscreen = document.querySelector('.openfullscreen'),
+    getclosefullscreen = document.querySelector('.closefullscreen');
+
+
+const videos = ["samplevideo1","samplevideo2"];
+
+let curridx = 0;
+
+loadvideo(videos[curridx]);
+
+function loadvideo(video){
+    getvideoscreen.src = `./img/${video}.mp4`;
+
+}
+
+function playvideo(){
+    playbtn.querySelector('i.fas').classList.remove('fa-play');
+    playbtn.querySelector('i.fas').classList.add('fa-pause');
+
+    getvideoscreen.play();
+}
+
+function pausevideo(){
+    playbtn.querySelector('i.fas').classList.add('fa-play');
+    playbtn.querySelector('i.fas').classList.remove('fa-pause');
+    
+    getvideoscreen.pause();
+}
+
+function playpausevideo(){
+    if(getvideoscreen.paused){
+        playvideo();
+    }else{
+        pausevideo();
+    }
+}
+
+function nextvideo(){
+    curridx++;
+
+    if(curridx > videos.length-1){
+        curridx = 0;
+    }
+    loadvideo(videos[curridx]);
+    playvideo();
+}
+
+
+function previousvideo(){
+    curridx -= 1;
+
+    if(curridx < 0){
+        curridx = videos.length-1;
+    }
+    loadvideo(videos[curridx]);
+    playvideo();
+}
+
+function stopvideo(){
+    getvideoscreen.currentTime = 0;
+    pausevideo();
+}
+
+function updateprogress(e){
+    // const currentTime = e.target.currentTime;
+    // const duration = e.target.duration;
+    // console.log(currentTime,duration);
+
+    // const {currentTime} = e.target;
+    // const {duration} = e.target;
+    // console.log(currentTime,duration);
+
+    // const [currentTime,duration] = [e.target.currentTime,e.target.duration];
+    // console.log(currentTime,duration);
+
+     const [currentTime,duration] = [e.srcElement.currentTime,e.srcElement.duration];
+    // console.log(currentTime,duration);
+
+    if(getvideoscreen.currentTime === 0){
+        getprogressbar.style.width = "0%";
+    }else{
+        const progresspercent = (currentTime/duration) * 100;
+        getprogressbar.style.width = `${progresspercent}%`;
+    }
+
+    let getmins = Math.floor(getvideoscreen.currentTime/60);
+    let getsecs = Math.floor(getvideoscreen.currentTime%60);
+
+    // if(getmins < 10){
+    //     getmins = "0"+getmins;
+    //     // getmins = "0"+String(getmins);
+    // }
+
+    // if(getsecs < 10){
+    //     // getsecs = "0"+getsecs;
+    //     getsecs = "0"+String(getsecs);
+    // }
+
+    const minutevalue = getmins.toString().padStart(2,"0");
+    const secondvalue = getsecs.toString().padStart(2,"0");
+
+    //console.log(minutevalue,secondvalue);
+
+    getdisplaytime.innerText = `${minutevalue}:${secondvalue}`;
+
+}
+
+function setprogress(e){
+    const getclientwidth = e.target.clientWidth;
+    const getclickx = e.offsetX;
+    const duration = getvideoscreen.duration;
+
+    getvideoscreen.currentTime = (getclickx/getclientwidth)*duration;
+}
+
+function openfullscreen(){
+
+    if(getcontainer.requestFullscreen){
+        getcontainer.requestFullscreen(); //standard
+    }else if(getcontainer.mozRequestFullscreen){
+        getcontainer.mozRequestFullscreen(); //firefox
+    }else if(getcontainer.webkitRequestFullscreen){
+        getcontainer.webkitRequestFullscreen(); //crome,safari,oppra
+    }else if(getcontainer.msRequestFullscreen){
+        getcontainer.msRequestFullscreen(); //ie, edga
+    }
+
+
+    getopenfullscreen.style.display = "none";
+    getclosefullscreen.style.display = "inline-block";
+}
+
+
+function closefullscreen(){
+
+    if(document.exitFullscreen){
+        document.exitFullscreen(); //standard
+    }else if(document.mozCancelFullscreen){
+        document.mozCancelFullscreen(); //firefox
+    }else if(document.webkitExitFullscreen){
+        document.webkitExitFullscreen(); //crome,safari,oppra
+    }else if(document.msExitFullscreen){
+        document.msExitFullscreen(); //ie, edga
+    }    
+
+    getopenfullscreen.style.display = "inline-block";
+    getclosefullscreen.style.display = "none";
+}
+
+
+
+getvideoscreen.addEventListener('timeupdate',updateprogress);
+getvideoscreen.addEventListener('ended',nextvideo);
+playbtn.addEventListener('click',playpausevideo);
+nextbtn.addEventListener('click',nextvideo);
+prevbtn.addEventListener('click',previousvideo);
+stopbtn.addEventListener('click',stopvideo);
+
+getprogress.addEventListener('click',setprogress);
+
+getopenfullscreen.addEventListener('click',openfullscreen);
+getclosefullscreen.addEventListener('click',closefullscreen);
+
+
+    </script>
+</body>
+</html>

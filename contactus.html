@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>ဆက်သွယ်ရန်</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
+    <body>
+
+        <nav class="bg-white w-full p-5 md:flex md:justify-between md:items-center shadow fixed z-10">
+            <div class="flex justify-between items-center">
+                  <span class="text-2xl cursor-pointer font-bold">
+                        <img src="./img/logo.jpg" class="w-12 h-12 inline rounded-full mr-4" alt="logo" />မန္တလေးမြို့တော်
+                  </span>
+                  <span class="text-2xl cursor-pointer md:hidden mx-4">
+                        <i class="fas fa-bars togglemenu" onclick="togglemenu(this)"></i>
+                  </span>
+            </div>
+
+            <ul class="w-full opacity-0 bg-white absolute left-0 pl-5 py-5 md:w-auto md:flex md:items-center md:static md:pl-0 md:py-0  md:opacity-100 transition-all duration-500">
+                  <li class="mx-5 my-6 md:my-0"><a href="mainpage.html" class="text-lg px-5 py-2 transition-all duration-500 hover:text-white hover:bg-sky-600 hover:rounded-lg">Home</a></li>
+                  <li class="mx-5 my-6 md:my-0"><a href="places.html" class="text-lg px-5 py-2 transition-all duration-500 hover:text-white hover:bg-sky-600 hover:rounded-lg">Places</a></li>
+                  <li class="mx-5 my-6 md:my-0"><a href="post.html" class="text-lg px-5 py-2 transition-all duration-500 hover:text-white hover:bg-sky-600 hover:rounded-lg">Posts</a></li>
+                  <li class="mx-5 my-6 md:my-0"><a href="gallery.html" class="text-lg px-5 py-2 transition-all duration-500 hover:text-white hover:bg-sky-600 hover:rounded-lg">Gallery</a></li>
+                  <li class="mx-5 my-6 md:my-0"><a href="video.html" class="text-lg px-5 py-2 transition-all duration-500 hover:text-white hover:bg-sky-600 hover:rounded-lg">Music</a></li>
+                  <li class="mx-5 my-6 md:my-0"><a href="contactus.html" class="text-lg px-5 py-2 transition-all duration-500 hover:text-white hover:bg-sky-600 hover:rounded-lg">Contact</a></li>
+            </ul>
+        </nav>
+      
+        <div class="h-[750px] flex justify-center items-center " >
+
+                  <div class="bg-white text-gray-500 flex mt-10 shadow-xl " style="width: 1200px;">
+                        <div class="w-1/2 hidden md:block">
+                              <img src="./img/mnn.jpg" class="rounded-l-xl h-full" alt="reg" />
+                        </div>
+
+                        <div class="w-full md:w-1/2 px-5 py-10 bg-violet-50 rounded-r-xl ">
+
+                              <div class="text-center mb-10">
+                                    <h1 class=" font-bold text-3xl text-gray-900">Contact Us</h1>
+                              </div>
+                       
+                              <form action="" method="" >
+                                    <div class="flex mb-3">
+                                          <div class="w-1/2 pr-2">
+                                                <label for="firstname" class="text-xs font-semibold px-1">First Name</label>
+                                                <div class="flex">
+                                                      <div class="w-10 flex justify-center items-center z-10"><i class="fas fa-user text-gray-700"></i></div>
+                                                      <input type="text" class="w-full border-2 border-gray-200 outline-none rounded-lg  focus:border-sky-800 pl-12 py-2 -ml-10" placeholder="First Name" />
+                                                </div>
+                                          </div>
+                                          
+                                          <div class="w-1/2">
+                                                <label for="firstname" class="text-xs font-semibold px-1">Last Name</label>
+                                                <div class="flex">
+                                                      <div class="w-10 flex justify-center items-center z-10"><i class="fas fa-user text-gray-700"></i></div>
+                                                      <input type="text" class="w-full border-2 border-gray-200 outline-none rounded-lg  focus:border-sky-800 pl-12 py-2 -ml-10" placeholder="Last Name" />
+                                                </div>
+                                          </div>     
+                                    </div>
+
+                                    <div class="w-full mb-3">
+                                          <label for="password" class="text-xs font-semibold px-1">Email</label>
+                                          <div class="flex">
+                                                <div class="w-10 flex justify-center items-center z-10"><i class="fas fa-envelope text-gray-700"></i></div>
+                                                <input type="email" class="w-full border-2 border-gray-200 outline-none focus:border-sky-800 rounded-lg  pl-12 py-2 -ml-10" placeholder="Email" />
+                                          </div>
+                                    </div>
+                                    
+
+                                     <div class="w-full mb-3">
+                                          <label for="password" class="text-xs font-semibold px-1">Address</label>
+                                          <div class="flex">
+                                                <div class="w-10 flex justify-center items-center z-10"><i class="fas fa-home text-gray-700"></i></div>
+                                                <input type="address" class="w-full border-2 border-gray-200 outline-none focus:border-sky-800 rounded-lg pl-12 py-2 -ml-10" placeholder="Address" />
+                                          </div>
+                                    </div>
+
+                                     <div class="w-full mb-5">
+                                          <label for="password" class="text-xs font-semibold px-1">Comments</label>
+                                          <div class="flex">
+                                                <div class="w-10 flex justify-center items-center z-10"><i class="fas fa-comment text-gray-700"></i></div>
+                                                <textarea class="w-full border-2 border-gray-200 outline-none focus:border-sky-800 rounded-lg  pl-12 py-2 -ml-10" placeholder="Comments" ></textarea>
+                                          </div>
+                                    </div>
+
+                                    <div class="">
+                                          <button type="submit" class="w-full bg-sky-800 text-white rounded-lg  font-semibold uppercase hover:border-sky-800  hover:bg-sky-600 py-3">Submit</button>
+                                    </div>
+                              </form>
+
+                       
+                        </div>
+
+                        
+                  </div>
+
+        </div>
+
+      
+      
+    </body>
+</html>

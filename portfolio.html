@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-white shadow fixed w-full z-10">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center ">
+      <h1 class="text-2xl font-bold">My Portfolio</h1>
+      <nav class="space-x-12 text-lg">
+        <a href="portfolio.html" class="transition-all duration-500 hover:bg-slate-500 hover:rounded-lg hover:text-white px-3 py-2">About</a>
+        <a href="#skills" class="transition-all duration-500 hover:bg-slate-500 hover:rounded-lg hover:text-white px-3 py-2">Skills</a>
+        <a href="#projects" class="transition-all duration-500 hover:bg-slate-500 hover:rounded-lg hover:text-white px-3 py-2">Projects</a>
+        <a href="#contact" class="transition-all duration-500 hover:bg-slate-500 hover:rounded-lg hover:text-white px-3 py-2">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="pt-28 pb-16 bg-gradient-to-r from-slate-500 to-slate-400 text-white">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2">
+        <h2 class="text-4xl font-bold mb-4">Hi, I'm a Web Developer</h2>
+        <p class="mb-6">I build web applications using HTML, Tailwind CSS, JavaScript, JavaEE, and MySQL. I have experience creating both front-end and back-end solutions, including small web systems and responsive websites.I enjoy building small full-stack projects to improve my skills and turning creative ideas into functional, visually appealing websites.</p>
+        <a href="mainpage.html" class="bg-white text-black px-6 py-2 rounded font-semibold hover:text-white hover:bg-black">View My Work</a>
+      </div>
+      <div class="md:w-1/2 mt-8 md:mt-0 flex justify-center">
+        <!-- Profile Image -->
+        <img src="./img/pf.jpg" alt="Profile" class="w-56 h-56 rounded-full object-cover shadow-lg" />
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- Skills Section -->
+  <section id="skills" class=" py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold mb-10 text-center">Skills</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
+        <div class="p-4 shadow rounded font-semibold bg-slate-500">HTML</div>
+        <div class="p-4 shadow rounded font-semibold bg-slate-500">CSS</div>
+        <div class="p-4 shadow rounded font-semibold bg-slate-500">Tailwind CSS</div>
+        <div class="p-4 shadow rounded font-semibold bg-slate-500"> Bootstrap</div>
+        <div class="p-4 shadow rounded font-semibold bg-slate-500">JavaScript / jQuery</div>
+        <div class="p-4 shadow rounded font-semibold bg-slate-500">JavaEE / Servlet</div>
+        <div class="p-4 shadow rounded font-semibold bg-slate-500">MySQL</div>
+        <div class="p-4 shadow rounded font-semibold bg-slate-500">GitHub</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold mb-10 text-center">Projects</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Project Card -->
+        <div class="bg-white rounded shadow-lg">
+          <img src="./img/ntow.png" alt="Project 1" class="w-full h-48 object-cover rounded-t" />
+          <div class="p-4">
+            <h4 class="font-bold text-xl mb-2">Project 1</h4>
+            <p class="text-sm mb-4">Numbers to Words project using JavaEE.</p>
+            <a href="studentmanagement" class="text-blue-600 hover:underline">View Details</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded shadow-lg">
+          <img src="./img/arithemtic.png" alt="Project 2" class="w-full h-48 object-cover rounded-t" />
+          <div class="p-4">
+            <h4 class="font-bold text-xl mb-2">Project 2</h4>
+            <p class="text-sm mb-4">Arithemtic project with JSP.</p>
+            <a href="#" class="text-blue-600 hover:underline">View Details</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded shadow-lg">
+          <img src="./img/time.png" alt="Project 3" class="w-full h-48 object-cover rounded-t" />
+          <div class="p-4">
+            <h4 class="font-bold text-xl mb-2">Project 3</h4>
+            <p class="text-sm mb-4">Current Date Time Project Using JavaEE Servlet.</p>
+            <a href="mainsm.jsp" class="text-blue-600 hover:underline">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold mb-6 text-center">Contact Me</h3>
+      <p class="text-center mb-6">You can contact me via email or GitHub.</p>
+      <div class="text-center space-y-2">
+        <p>Email: shweyatimin2004@email.com</p>
+        <p>GitHub: <a href="https://github.com/shweyatimin" class="text-blue-600 hover:underline" target="_blank">github.com/shweyatimin</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-4 text-center">
+    <p>&copy; 2026 My Portfolio. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

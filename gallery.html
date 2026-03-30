@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>ပုံများ</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
+    <body>
+
+
+        <nav class="bg-white w-full p-5 md:flex md:justify-between md:items-center shadow fixed z-10">
+            <div class="flex justify-between items-center">
+                  <span class="text-2xl cursor-pointer font-bold">
+                        <img src="./img/logo.jpg" class="w-12 h-12 inline rounded-full mr-4" alt="logo" />မန္တလေးမြို့တော်
+                  </span>
+                  <span class="text-2xl cursor-pointer md:hidden mx-4">
+                        <i class="fas fa-bars togglemenu" onclick="togglemenu(this)"></i>
+                  </span>
+            </div>
+
+            <ul class="w-full opacity-0 bg-white absolute left-0 pl-5 py-5 md:w-auto md:flex md:items-center md:static md:pl-0 md:py-0  md:opacity-100 transition-all duration-500">
+                  <li class="mx-5 my-6 md:my-0"><a href="mainpage.html" class="text-lg px-5 py-2 transition-all duration-500 hover:text-white hover:bg-sky-600 hover:rounded-lg">Home</a></li>
+                  <li class="mx-5 my-6 md:my-0"><a href="places.html" class="text-lg px-5 py-2 transition-all duration-500 hover:text-white hover:bg-sky-600 hover:rounded-lg">Places</a></li>
+                  <li class="mx-5 my-6 md:my-0"><a href="post.html" class="text-lg px-5 py-2 transition-all duration-500 hover:text-white hover:bg-sky-600 hover:rounded-lg">Posts</a></li>
+                  <li class="mx-5 my-6 md:my-0"><a href="gallery.html" class="text-lg px-5 py-2 transition-all duration-500 hover:text-white hover:bg-sky-600 hover:rounded-lg">Gallery</a></li>
+                  <li class="mx-5 my-6 md:my-0"><a href="video.html" class="text-lg px-5 py-2 transition-all duration-500 hover:text-white hover:bg-sky-600 hover:rounded-lg">Music</a></li>
+                  <li class="mx-5 my-6 md:my-0"><a href="contactus.html" class="text-lg px-5 py-2 transition-all duration-500 hover:text-white hover:bg-sky-600 hover:rounded-lg">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section class="max-w-screen-2xl mx-auto px-4 py-6 ">
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 xl:gap-8 mt-20 mx-20">
+
+            <a href="javascript:void(0);" class="h-48 md:h-80 md:col-span-1 bg-gray-100 flex rounded-lg items-end relative group overflow-hidden shadow-lg">
+                <img src="./img/mmm.jpg" class="w-full h-full inset-0 object-center transition  absolute duration-200 group-hover:scale-110" alt="pic" onclick="openLightbox(this)"/>
+                <span class="text-sm text-white md:text-lg relative ml-4 mb-3 md:ml-5 md:text-lg">ကုသိုလ်တော်</span>
+            </a>
+
+            <a href="javascript:void(0);" class="h-48 md:h-80 md:col-span-1 bg-gray-100 flex rounded-lg items-end relative group overflow-hidden">
+                <img src="./img/mm.jpg" class="w-full h-full inset-0 object-center transition  absolute duration-200 group-hover:scale-110" alt="pic" onclick="openLightbox(this)"/>
+                <span class="text-sm text-white md:text-lg relative ml-4 mb-3 md:ml-5 md:text-lg">မန္တလေးတောင်ခြေ</span>
+            </a>
+
+            <a href="javascript:void(0);" class="h-48 md:h-80 md:col-span-1 bg-gray-100 flex rounded-lg items-end relative group overflow-hidden">
+                <img src="./img/m.jpg" class="w-full h-full inset-0 object-center transition  absolute duration-200 group-hover:scale-110" alt="pic" onclick="openLightbox(this)"/>
+                <span class="text-sm text-white md:text-lg relative ml-4 mb-3 md:ml-5 md:text-lg">မြသိန်းတန်</span>
+            </a>
+
+            <a href="javascript:void(0);" class="h-48 md:h-80 md:col-span-1 bg-gray-100 flex rounded-lg items-end relative group overflow-hidden">
+                <img src="./img/e.jpg" class="w-full h-full inset-0 object-center transition absolute duration-200 group-hover:scale-110" alt="pic" onclick="openLightbox(this)"/>
+                <span class="text-sm text-white md:text-lg relative ml-4 mb-3 md:ml-5 md:text-lg">မြနန်းစံကျော် ရွှေနန်းတော်</span>
+            </a>
+
+            <a href="javascript:void(0);" class="h-48 md:h-80 md:col-span-2  bg-gray-100 flex rounded-lg items-end relative group overflow-hidden">
+                <img src="./img/pp.jpg" class="w-full h-full inset-0 object-center transition absolute duration-200 group-hover:scale-110" alt="pic" onclick="openLightbox(this)"/>
+                <span class="text-sm text-white md:text-lg relative ml-4 mb-3 md:ml-5 md:text-lg">နန်းတော်</span>
+            </a>
+
+            <a href="javascript:void(0);" class="h-48 md:h-80 md:col-span-2 bg-gray-100 flex rounded-lg items-end relative group overflow-hidden">
+                <img src="./img/k.jpg" class="w-full h-full inset-0 object-center transition absolute duration-200 group-hover:scale-110" alt="pic" onclick="openLightbox(this)"/>
+                <span class="text-sm text-white md:text-lg relative ml-4 mb-3 md:ml-5 md:text-lg">ကုသိုလ်တော်</span>
+            </a>
+
+            <a href="javascript:void(0);" class="h-48 md:h-80 md:col-span-1  bg-gray-100 flex rounded-lg items-end relative group overflow-hidden">
+                <img src="./img/ss.jpg" class="w-full h-full inset-0 object-center transition absolute duration-200 group-hover:scale-110" alt="pic" onclick="openLightbox(this)"/>
+                <span class="text-sm text-white md:text-lg relative ml-4 mb-3 md:ml-5 md:text-lg">စန္ဒာမုနိဘုရား</span>
+            </a>
+
+             <a href="javascript:void(0);" class="h-48 md:h-80 md:col-span-1 bg-gray-100 flex rounded-lg items-end relative group overflow-hidden shadow-lg">
+                <img src="./img/bb.jpg" class="w-full h-full inset-0 object-center transition  absolute duration-200 group-hover:scale-110" alt="pic" onclick="openLightbox(this)"/>
+                <span class="text-sm text-white md:text-lg relative ml-4 mb-3 md:ml-5 md:text-lg">ဦးပိန်</span>
+            </a>
+
+            <a href="javascript:void(0);" class="h-48 md:h-80 md:col-span-1 bg-gray-100 flex rounded-lg items-end relative group overflow-hidden">
+                <img src="./img/ub.jpg" class="w-full h-full inset-0 object-center transition  absolute duration-200 group-hover:scale-110" alt="pic" onclick="openLightbox(this)"/>
+                <span class="text-sm text-white md:text-lg relative ml-4 mb-3 md:ml-5 md:text-lg">ဦးပိန်တံတား</span>
+            </a>
+
+            <a href="javascript:void(0);" class="h-48 md:h-80 md:col-span-1 bg-gray-100 flex rounded-lg items-end relative group overflow-hidden">
+                <img src="./img/zc.jpg" class="w-full h-full inset-0 object-center transition  absolute duration-200 group-hover:scale-110" alt="pic" onclick="openLightbox(this)"/>
+                <span class="text-sm text-white md:text-lg relative ml-4 mb-3 md:ml-5 md:text-lg">စျေးချိုနာရီစင်</span>
+            </a>
+
+            <a href="javascript:void(0);" class="h-48 md:h-80 md:col-span-1 bg-gray-100 flex rounded-lg items-end relative group overflow-hidden shadow-lg">
+                <img src="./img/bl.jpg" class="w-full h-full inset-0 object-center transition  absolute duration-200 group-hover:scale-110" alt="pic" onclick="openLightbox(this)"/>
+                <span class="text-sm text-white md:text-lg relative ml-4 mb-3 md:ml-5 md:text-lg">အဆောက်အဦးများ</span>
+            </a>
+
+            <a href="javascript:void(0);" class="h-48 md:h-80 md:col-span-1 bg-gray-100 flex rounded-lg items-end relative group overflow-hidden">
+                <img src="./img/bd.jpg" class="w-full h-full inset-0 object-center transition  absolute duration-200 group-hover:scale-110" alt="pic" onclick="openLightbox(this)"/>
+                <span class="text-sm text-white md:text-lg relative ml-4 mb-3 md:ml-5 md:text-lg">အဆောက်အဦးများ</span>
+            </a>
+
+            <a href="javascript:void(0);" class="h-48 md:h-80 md:col-span-1 bg-gray-100 flex rounded-lg items-end relative group overflow-hidden">
+                <img src="./img/bd2.jpg" class="w-full h-full inset-0 object-center transition  absolute duration-200 group-hover:scale-110" alt="pic" onclick="openLightbox(this)"/>
+                <span class="text-sm text-white md:text-lg relative ml-4 mb-3 md:ml-5 md:text-lg">အဆောက်အဦးများ</span>
+            </a>
+
+
+           
+
+          </div>
+
+        </section>
+
+       <!-- Image Lightbox -->
+        <div id="lightbox"
+            class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50">
+
+            <!-- Close -->
+            <button onclick="closeLightbox()"
+                class="absolute top-6 right-6 text-white text-4xl hover:text-gray-300">
+                &times;
+            </button>
+
+            <!-- Previous -->
+            <button onclick="prevImage()"
+                class="absolute left-6 top-1/2 -translate-y-1/2 text-white text-4xl hover:text-gray-300">
+                <i class="fas fa-angle-left"></i>
+            </button>
+
+            <!-- Image -->
+            <img id="lightboxImg"
+                class="max-w-[90%] max-h-[90%] rounded-lg shadow-2xl">
+
+            <!-- Next -->
+            <button onclick="nextImage()"
+                class="absolute right-6 top-1/2 -translate-y-1/2 text-white text-4xl hover:text-gray-300">
+                <i class="fas fa-angle-right"></i>
+            </button>
+        </div>
+
+
+        <script >
+
+            function togglemenu(ele){
+                  //console.log(ele);
+                  //console.log(ele.className);
+
+                  const getul = document.querySelector('ul');
+                  ele.classList.contains('togglemenu') ? (ele.classList.remove('togglemenu'),getul.classList.add('opacity-100'))  : (ele.classList.add('togglemenu'),getul.classList.add('opacity-100'));
+            }
+
+            const galleryImages = Array.from(document.querySelectorAll("section img"));
+            let currentIndex = 0;
+
+            function openLightbox(imgElement) {
+                currentIndex = galleryImages.indexOf(imgElement);
+                document.getElementById("lightboxImg").src = imgElement.src;
+
+                const lightbox = document.getElementById("lightbox");
+                lightbox.classList.remove("hidden");
+                lightbox.classList.add("flex");
+            }
+
+            function closeLightbox() {
+                const lightbox = document.getElementById("lightbox");
+                lightbox.classList.add("hidden");
+                lightbox.classList.remove("flex");
+            }
+
+            function nextImage() {
+                currentIndex = (currentIndex + 1) % galleryImages.length;
+                document.getElementById("lightboxImg").src = galleryImages[currentIndex].src;
+            }
+
+            function prevImage() {
+                currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+                document.getElementById("lightboxImg").src = galleryImages[currentIndex].src;
+            }
+        </script>
+
+
+
+    </body>
+</html>

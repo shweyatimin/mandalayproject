@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>သတင်းများ</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
+    <body>
+
+        <nav class="bg-white w-full p-5 md:flex md:justify-between md:items-center shadow fixed z-10">
+            <div class="flex justify-between items-center">
+                  <span class="text-2xl cursor-pointer font-bold">
+                        <img src="./img/logo.jpg" class="w-12 h-12 inline rounded-full mr-4" alt="logo" />မန္တလေးမြို့တော်
+                  </span>
+                  <span class="text-2xl cursor-pointer md:hidden mx-4">
+                        <i class="fas fa-bars togglemenu" onclick="togglemenu(this)"></i>
+                  </span>
+            </div>
+
+            <ul class="w-full opacity-0 bg-white absolute left-0 pl-5 py-5 md:w-auto md:flex md:items-center md:static md:pl-0 md:py-0  md:opacity-100 transition-all duration-500">
+                  <li class="mx-5 my-6 md:my-0"><a href="mainpage.html" class="text-lg px-5 py-2 transition-all duration-500 hover:text-white hover:bg-sky-600 hover:rounded-lg">Home</a></li>
+                  <li class="mx-5 my-6 md:my-0"><a href="places.html" class="text-lg px-5 py-2 transition-all duration-500 hover:text-white hover:bg-sky-600 hover:rounded-lg">Places</a></li>
+                  <li class="mx-5 my-6 md:my-0"><a href="culture.html" class="text-lg px-5 py-2 transition-all duration-500 hover:text-white hover:bg-sky-600 hover:rounded-lg">Posts</a></li>
+                  <li class="mx-5 my-6 md:my-0"><a href="gallery.html" class="text-lg px-5 py-2 transition-all duration-500 hover:text-white hover:bg-sky-600 hover:rounded-lg">Gallery</a></li>
+                  <li class="mx-5 my-6 md:my-0"><a href="video.html" class="text-lg px-5 py-2 transition-all duration-500 hover:text-white hover:bg-sky-600 hover:rounded-lg">Music</a></li>
+                  <li class="mx-5 my-6 md:my-0"><a href="contactus.html" class="text-lg px-5 py-2 transition-all duration-500 hover:text-white hover:bg-sky-600 hover:rounded-lg">Contact</a></li>
+            </ul>
+        </nav>
+
+        
+
+        <section class="h-[900px] max-w-screen-xl mx-auto p-5 ">
+
+            <div id="postGrid" class="grid grid-cols-2 lg:grid-cols-4 gap-5 mt-20">
+
+                <div class="w-full h-96 bg-cover bg-center cursor-pointer flex items-end group relative" style="background-image: url(./img/cul.jpg);">
+                    <div class="flex justify-between items-center absolute left-0 top-0 right-0 mx-5 mt-3">
+                        <a href="javascript:void(0);" class="bg-violet-600 text-gray-100 text-xs uppercase hover:underline px-3 py-2">Delete</a>
+                        <div class="text-gray-100 flex flex-col text-center">
+                            <span class="text-xl">2016/5/11</span>
+                            <span class="text-xl">2.7k view</span>
+                        </div>
+                    </div>
+                    <h3 class="p-3 z-10">
+                        <a href="javascript:void(0);" class="font-medium text-gray-100 text-md lg:text-2xl group-hover:underline">နန်းမြိုရိုးဘေးတွင် အလှူလှည့်နေကြပုံ</a>
+                    </h3>
+                </div>
+
+                <div class="w-full h-96 bg-cover bg-center cursor-pointer flex items-end group relative" style="background-image: url(./img/cul2.jpg);">
+                    <div class="flex justify-between items-center absolute left-0 top-0 right-0 mx-5 mt-3">
+                        <a href="javascript:void(0);" class="bg-violet-600 text-gray-100 text-xs uppercase hover:underline px-3 py-2">More</a>
+                        <div class="text-gray-100 flex flex-col text-center">
+                            <span class="text-xl">2018/2/23</span>
+                            <span class="text-xl">3.3k view</span>
+                        </div>
+                    </div>
+                    <h3 class="p-3 z-10">
+                        <a href="javascript:void(0);" class="font-medium text-gray-100 text-md lg:text-2xl group-hover:underline">ကျုံးအတွင်း၌ လှေလှော်ပြိုင်နေကြသော မြင်ကွင်း</a>
+                    </h3>
+                </div>
+
+                <div class="w-full h-96 bg-cover bg-center cursor-pointer flex items-end group relative" style="background-image: url(./img/cul3.jpg);">
+                   
+                    <div class="flex justify-between items-center absolute left-0 top-0 right-0 mx-5 mt-3">
+                        <a href="javascript:void(0);" class="bg-violet-600 text-gray-100 text-xs uppercase hover:underline px-3 py-2">More</a>
+                        <div class="text-gray-100 flex flex-col text-center">
+                            <span class="text-xl">2024/9/24</span>
+                            <span class="text-xl">2.1k view</span>
+                        </div>
+                    </div>
+                    <h3 class="p-3 z-10">
+                        <a href="javascript:void(0);" class="font-medium text-gray-100 text-md lg:text-2xl group-hover:underline">ကျောက်တော်ကြီး ဘုရားပွဲတွင် လူများလည်ပတ်နေကြပုံ</a>
+                    </h3>
+                </div>
+
+                <div class="w-full h-96 bg-cover bg-center cursor-pointer flex items-end group relative" style="background-image: url(./img/cul4.jpg);">
+                    
+                    <div class="flex justify-between items-center absolute left-0 top-0 right-0 mx-5 mt-3">
+                        <a href="javascript:void(0);" class="bg-violet-600 text-gray-100 text-xs uppercase hover:underline px-3 py-2">More</a>
+                        <div class="text-gray-100 flex flex-col text-center">
+                            <span class="text-xl">2020/9/13</span>
+                            <span class="text-xl">1.9k view</span>
+                        </div>
+                    </div>
+                    <h3 class="p-3 z-10">
+                        <a href="javascript:void(0);" class="font-medium text-gray-100 text-md lg:text-2xl group-hover:underline">မဟာမြတ်မုနိဘုရားအား ဖူးမြော်နေသည့် မြင်ကွင်း</a>
+                    </h3>
+                </div>
+
+                 <div class="w-full h-96 bg-cover bg-center cursor-pointer flex items-end group relative" style="background-image: url(./img/cul5.jpg);">
+                    
+                    <div class="flex justify-between items-center absolute left-0 top-0 right-0 mx-5 mt-3">
+                        <a href="javascript:void(0);" class="bg-violet-600 text-gray-100 text-xs uppercase hover:underline px-3 py-2">More</a>
+                        <div class="text-gray-100 flex flex-col text-center">
+                            <span class="text-xl">2024/4/20</span>
+                            <span class="text-xl">5.2k view</span>
+                        </div>
+                    </div>
+                    <h3 class="p-3 z-10">
+                        <a href="javascript:void(0);" class="font-medium text-gray-100 text-md lg:text-2xl group-hover:underline">ရိုးရာ ရက်ကန်းအထည်များ</a>
+                    </h3>
+                </div>
+
+                <div class="w-full h-96 bg-cover bg-center cursor-pointer flex items-end group relative" style="background-image: url(./img/cul6.jpg);">
+                    
+                    <div class="flex justify-between items-center absolute left-0 top-0 right-0 mx-5 mt-3">
+                        <a href="javascript:void(0);" class="bg-violet-600 text-gray-100 text-xs uppercase hover:underline px-3 py-2">More</a>
+                        <div class="text-gray-100 flex flex-col text-center">
+                            <span class="text-xl">2021/3/12</span>
+                            <span class="text-xl">1.8k view</span>
+                        </div>
+                    </div>
+                    <h3 class="p-3 z-10">
+                        <a href="javascript:void(0);" class="font-medium text-gray-100 text-md lg:text-2xl group-hover:underline">ဘုရားဝန်းအတွင်း ပန်းရောင်းနေကြသူများ</a>
+                    </h3>
+                </div>
+
+                <div class="w-full h-96 bg-cover bg-center cursor-pointer flex items-end group relative" style="background-image: url(./img/cul7.jpg);">
+                    
+                    <div class="flex justify-between items-center absolute left-0 top-0 right-0 mx-5 mt-3">
+                        <a href="javascript:void(0);" class="bg-violet-600 text-gray-100 text-xs uppercase hover:underline px-3 py-2">More</a>
+                        <div class="text-gray-100 flex flex-col text-center">
+                            <span class="text-xl">2019/8/30</span>
+                            <span class="text-xl">1.2k view</span>
+                        </div>
+                    </div>
+                    <h3 class="p-3 z-10">
+                        <a href="javascript:void(0);" class="font-medium text-gray-100 text-md lg:text-2xl group-hover:underline">ကြိမ်နှင့်ပြုလုပ်သောလက်မှု ပညာ</a>
+                    </h3>
+                </div>
+
+                <div class="w-full h-96 bg-cover bg-center cursor-pointer flex items-end group relative" style="background-image: url(./img/cul8.jpg);">
+                    
+                    <div class="flex justify-between items-center absolute left-0 top-0 right-0 mx-5 mt-3">
+                        <a href="javascript:void(0);" class="bg-violet-600 text-gray-100 text-xs uppercase hover:underline px-3 py-2">More</a>
+                        <div class="text-gray-100 flex flex-col text-center">
+                            <span class="text-xl">2025/7/7</span>
+                            <span class="text-xl">4.4k view</span>
+                        </div>
+                    </div>
+                    <h3 class="p-3 z-10">
+                        <a href="javascript:void(0);" class="font-medium text-gray-100 text-md lg:text-2xl group-hover:underline">မန္တလေး၏ အထင်ရှားဆုံးအစားအစာ (ထိုးမုန့်)</a>
+                    </h3>
+                </div>
+
+                </div>
+
+             <div class="max-w-screen-xl mx-auto mt-24 px-5">
+            <button onclick="openPostForm()" 
+                class="bg-sky-600 text-white px-6 py-2 rounded-lg hover:bg-sky-700">
+                ➕ Add New Post
+            </button>
+        </div>
+
+                
+            
+
+          
+        </section>
+
+       
+
+        <!-- Add Post Modal -->
+        <div id="postModal" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
+            <div class="bg-white p-6 rounded-lg w-96">
+                <h2 class="text-xl font-bold mb-4">Create New Post</h2>
+
+                <input id="postTitle" type="text" placeholder="Post Title"
+                    class="w-full border p-2 mb-3 rounded">
+
+                <input id="postImage" type="file" accept="image/*"
+                    class="w-full mb-3">
+
+                <div class="flex justify-end gap-3">
+                    <button onclick="closePostForm()" class="px-4 py-2 border rounded">
+                        Cancel
+                    </button>
+                    <button onclick="addPost()" class="px-4 py-2 bg-sky-600 text-white rounded">
+                        Post
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+function openPostForm() {
+    document.getElementById("postModal").classList.remove("hidden");
+    document.getElementById("postModal").classList.add("flex");
+}
+
+function closePostForm() {
+    document.getElementById("postModal").classList.add("hidden");
+    document.getElementById("postModal").classList.remove("flex");
+}
+
+function addPost() {
+    const title = document.getElementById("postTitle").value;
+    const imageInput = document.getElementById("postImage");
+
+    if (!title || !imageInput.files[0]) {
+        alert("Please enter title and image");
+        return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = function () {
+        const post = {
+            title: title,
+            image: reader.result,
+            date: new Date().toLocaleDateString(),
+            views: Math.floor(Math.random() * 1000) + " view"
+        };
+
+        let posts = JSON.parse(localStorage.getItem("posts")) || [];
+        posts.unshift(post);
+        localStorage.setItem("posts", JSON.stringify(posts));
+
+        renderPosts();
+        closePostForm();
+        document.getElementById("postTitle").value = "";
+        document.getElementById("postImage").value = "";
+    };
+
+    reader.readAsDataURL(imageInput.files[0]);
+}
+
+function renderPosts() {
+    const grid = document.getElementById("postGrid");
+    let posts = JSON.parse(localStorage.getItem("posts")) || [];
+
+    posts.forEach(post => {
+        const div = document.createElement("div");
+        div.className = "w-full h-96 bg-cover bg-center cursor-pointer flex items-end group relative";
+        div.style.backgroundImage = `url(${post.image})`;
+
+        div.innerHTML = `
+            <div class="flex justify-between items-center absolute left-0 top-0 right-0 mx-5 mt-3">
+                <span class="bg-violet-600 text-gray-100 text-xs px-3 py-2">New</span>
+                <div class="text-gray-100 text-center">
+                    <span class="block">${post.date}</span>
+                    <span class="block">${post.views}</span>
+                </div>
+            </div>
+            <h3 class="p-3 z-10">
+                <span class="font-medium text-gray-100 text-md lg:text-2xl">
+                    ${post.title}
+                </span>
+            </h3>
+        `;
+        grid.prepend(div);
+    });
+
+    localStorage.removeItem("postsRendered");
+}
+
+window.onload = function () {
+    renderPosts();
+};
+</script>
+
+
+        
+
+    </body>
+</html>
